@@ -24,6 +24,9 @@ O programa recebe uma linha do stdin na qual soma os números que encontra na li
 ## Exemplo:
 
 PS> dsadwadadsadaw45adwadsadw2025-02-07sdadaw=OFFdwasfgsdf789dsadwadsad43dwaONdsadw2adsadasON5=
+
 2079
+
 2086
+
 Resultado é: 2086

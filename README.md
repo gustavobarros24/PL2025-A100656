@@ -1,6 +1,7 @@
 # Identificação
 
-[Picture](me.jpg) 
+![Picture](me.jpg) 
+
 **Nome:** Gustavo Manuel Marinho Barros  
 **Número de Identificação:** A100656
 

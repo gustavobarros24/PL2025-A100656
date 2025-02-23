@@ -1,4 +1,4 @@
-# Título
+# Conversor de MarkDown para HTML
 
 ## 2025-xx-xx
 
@@ -9,6 +9,16 @@
 
 ## Enunciado:
 
+Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic
+Syntax" da Cheat Sheet:
+
+Cabeçalhos: linhas iniciadas por "# texto", ou "## texto" ou "### texto"
+
+Bold: pedaços de texto entre "**"
+
+Itálico: pedaços de texto entre "*"
+
+Lista numerada.
 
 ## Resumo:
 

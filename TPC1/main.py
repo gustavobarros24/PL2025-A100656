@@ -42,11 +42,13 @@ def somaonofftexto(texto):
     
     return res
 
-if __name__ == "__main__":
+def main():
     for linha in sys.stdin:
         soma = str(somaonofftexto(linha.strip()))
         print("Resultado é: " + soma)
 
+if __name__ == "__main__":
+    main()
 
 #dsadwadadsadaw45adwadsadw2025-02-07sdadaw=OFFdwasfgsdf789dsadwadsad43dwaONdsadw2adsadasON5=
 

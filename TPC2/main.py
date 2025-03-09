@@ -52,7 +52,7 @@ def processdata(filepath):
     print("O dataset foi analisado completamente.\n")
     return compositoresordenados, distribuicaoporperiodo, obrasporperiodo
 
-if __name__ == "__main__":
+def main():
     filepath = 'obras.csv'
 
     compositores, distribuicao, obrasporperiodo = processdata(filepath)
@@ -70,4 +70,6 @@ if __name__ == "__main__":
         print(f"\n{periodo}:")
         for obra in obras:
             print(f"- {obra}")
-            
+
+if __name__ == "__main__":
+    main()  

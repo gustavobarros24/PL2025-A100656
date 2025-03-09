@@ -1,0 +1,9 @@
+<h1>Exemplo</h1>
+Este é um <b>exemplo</b> com <i>itálico</i> e <a href="http://www.google.pt">link</a>
+<h2>Segundo nível</h2>
+<ol>
+    <li>Primeiro item</li>
+    <li>Segundo <b>item</b> com <img src="google.jpg" alt="imagem"/></li>
+    <li>Terceiro item</li>
+</ol>
+Texto normal depois da lista

@@ -1,6 +1,6 @@
 # Conversor de MarkDown para HTML
 
-## 2025-xx-xx
+## 2025-03-09
 
 ## Autor:
 
@@ -9,8 +9,7 @@
 
 ## Enunciado:
 
-Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic
-Syntax" da Cheat Sheet:
+Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic Syntax" da Cheat Sheet:
 
 Cabeçalhos: linhas iniciadas por "# texto", ou "## texto" ou "### texto"
 
@@ -26,6 +25,15 @@ Imagem: "![texto alternativo](path para a imagem)"
 
 ## Resumo:
 
+O texto Markdown dado é processado linha por linha, nas quais identifica e converte a sintaxe Markdown em (tags) HTML.
+
+O processo é dividido em duas etapas:
+
+1: Utiliza expressões regulares para identificar e substituir Markdown pelas tags equivalentes em HTML.
+
+2: Em cada linha do texto identifica cabeçalhos (#, ##, ###) e listas numeradas, convertendo-os para <h1>, <h2>, <h3> e <ol> com <li>, respectivamente.
+
+No fim junta tudo numa string e separa tudo com /n (return '\n'.join(htmllines))
 
 ## Exemplo:
 

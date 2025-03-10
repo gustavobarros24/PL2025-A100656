@@ -1,0 +1,34 @@
+Incorreta, ainda estou a tentar fazer direito
+
+Analisando a query:
+Token: TEXT, Valor: DBPedia, Linha: 2
+Caractere ilegal ':' na linha 2
+Token: TEXT, Valor: obras de Chuck Berry
+        select, Linha: 2
+Token: VAR, Valor: ?nome, Linha: 2
+Token: VAR, Valor: ?desc, Linha: 2
+Token: TEXT, Valor: where, Linha: 2
+Token: LBRACE, Valor: {, Linha: 2
+Token: VAR, Valor: ?s, Linha: 3
+Token: TEXT, Valor: a dbo, Linha: 3
+Caractere ilegal ':' na linha 3
+Token: TEXT, Valor: MusicalArtist, Linha: 3
+Token: DOT, Valor: ., Linha: 3
+Token: VAR, Valor: ?s, Linha: 4
+Token: IDENTIFIER, Valor: foaf:name, Linha: 4
+Token: STRING, Valor: "Chuck Berry"@en, Linha: 4
+Token: DOT, Valor: ., Linha: 4
+Token: VAR, Valor: ?w, Linha: 5
+Token: IDENTIFIER, Valor: dbo:artist, Linha: 5
+Token: VAR, Valor: ?s, Linha: 5
+Token: DOT, Valor: ., Linha: 5
+Token: VAR, Valor: ?w, Linha: 6
+Token: IDENTIFIER, Valor: foaf:name, Linha: 6
+Token: VAR, Valor: ?nome, Linha: 6
+Token: DOT, Valor: ., Linha: 6
+Token: VAR, Valor: ?w, Linha: 7
+Token: IDENTIFIER, Valor: dbo:abstract, Linha: 7
+Token: VAR, Valor: ?desc, Linha: 7
+Token: RBRACE, Valor: }, Linha: 8
+Token: TEXT, Valor: LIMIT, Linha: 8
+Token: NUMBER, Valor: 1000, Linha: 8

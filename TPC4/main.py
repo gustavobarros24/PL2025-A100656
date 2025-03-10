@@ -8,9 +8,9 @@ tokens = (
     'SELECT',        # select
     'WHERE',         # where
     'LIMIT',         # LIMIT
-    'VAR',           # variáveis como ?nome, ?desc
-    'STRING',        # strings como "Chuck Berry"@en
-    'NUMBER',        # números como 1000
+    'VAR',           # variáveis ?nome, ?desc
+    'STRING',        # strings "Chuck Berry"@en
+    'NUMBER',        # números 1000
     'LBRACE',        # {
     'RBRACE',        # }
     'DOT',           # .

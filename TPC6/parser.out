@@ -1,0 +1,229 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> S
+Rule 1     S -> Exp
+Rule 2     Exp -> Exp ADD Exp
+Rule 3     Exp -> Exp SUB Exp
+Rule 4     Exp -> Exp MUL Exp
+Rule 5     Exp -> NUM
+Rule 6     Exp -> PA Exp PF
+
+Terminals, with rules where they appear
+
+ADD                  : 2
+MUL                  : 4
+NUM                  : 5
+PA                   : 6
+PF                   : 6
+SUB                  : 3
+error                : 
+
+Nonterminals, with rules where they appear
+
+Exp                  : 1 2 2 3 3 4 4 6
+S                    : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . S
+    (1) S -> . Exp
+    (2) Exp -> . Exp ADD Exp
+    (3) Exp -> . Exp SUB Exp
+    (4) Exp -> . Exp MUL Exp
+    (5) Exp -> . NUM
+    (6) Exp -> . PA Exp PF
+
+    NUM             shift and go to state 3
+    PA              shift and go to state 4
+
+    S                              shift and go to state 1
+    Exp                            shift and go to state 2
+
+state 1
+
+    (0) S' -> S .
+
+
+
+state 2
+
+    (1) S -> Exp .
+    (2) Exp -> Exp . ADD Exp
+    (3) Exp -> Exp . SUB Exp
+    (4) Exp -> Exp . MUL Exp
+
+    $end            reduce using rule 1 (S -> Exp .)
+    ADD             shift and go to state 5
+    SUB             shift and go to state 6
+    MUL             shift and go to state 7
+
+
+state 3
+
+    (5) Exp -> NUM .
+
+    ADD             reduce using rule 5 (Exp -> NUM .)
+    SUB             reduce using rule 5 (Exp -> NUM .)
+    MUL             reduce using rule 5 (Exp -> NUM .)
+    $end            reduce using rule 5 (Exp -> NUM .)
+    PF              reduce using rule 5 (Exp -> NUM .)
+
+
+state 4
+
+    (6) Exp -> PA . Exp PF
+    (2) Exp -> . Exp ADD Exp
+    (3) Exp -> . Exp SUB Exp
+    (4) Exp -> . Exp MUL Exp
+    (5) Exp -> . NUM
+    (6) Exp -> . PA Exp PF
+
+    NUM             shift and go to state 3
+    PA              shift and go to state 4
+
+    Exp                            shift and go to state 8
+
+state 5
+
+    (2) Exp -> Exp ADD . Exp
+    (2) Exp -> . Exp ADD Exp
+    (3) Exp -> . Exp SUB Exp
+    (4) Exp -> . Exp MUL Exp
+    (5) Exp -> . NUM
+    (6) Exp -> . PA Exp PF
+
+    NUM             shift and go to state 3
+    PA              shift and go to state 4
+
+    Exp                            shift and go to state 9
+
+state 6
+
+    (3) Exp -> Exp SUB . Exp
+    (2) Exp -> . Exp ADD Exp
+    (3) Exp -> . Exp SUB Exp
+    (4) Exp -> . Exp MUL Exp
+    (5) Exp -> . NUM
+    (6) Exp -> . PA Exp PF
+
+    NUM             shift and go to state 3
+    PA              shift and go to state 4
+
+    Exp                            shift and go to state 10
+
+state 7
+
+    (4) Exp -> Exp MUL . Exp
+    (2) Exp -> . Exp ADD Exp
+    (3) Exp -> . Exp SUB Exp
+    (4) Exp -> . Exp MUL Exp
+    (5) Exp -> . NUM
+    (6) Exp -> . PA Exp PF
+
+    NUM             shift and go to state 3
+    PA              shift and go to state 4
+
+    Exp                            shift and go to state 11
+
+state 8
+
+    (6) Exp -> PA Exp . PF
+    (2) Exp -> Exp . ADD Exp
+    (3) Exp -> Exp . SUB Exp
+    (4) Exp -> Exp . MUL Exp
+
+    PF              shift and go to state 12
+    ADD             shift and go to state 5
+    SUB             shift and go to state 6
+    MUL             shift and go to state 7
+
+
+state 9
+
+    (2) Exp -> Exp ADD Exp .
+    (2) Exp -> Exp . ADD Exp
+    (3) Exp -> Exp . SUB Exp
+    (4) Exp -> Exp . MUL Exp
+
+  ! shift/reduce conflict for ADD resolved as shift
+  ! shift/reduce conflict for SUB resolved as shift
+  ! shift/reduce conflict for MUL resolved as shift
+    $end            reduce using rule 2 (Exp -> Exp ADD Exp .)
+    PF              reduce using rule 2 (Exp -> Exp ADD Exp .)
+    ADD             shift and go to state 5
+    SUB             shift and go to state 6
+    MUL             shift and go to state 7
+
+  ! ADD             [ reduce using rule 2 (Exp -> Exp ADD Exp .) ]
+  ! SUB             [ reduce using rule 2 (Exp -> Exp ADD Exp .) ]
+  ! MUL             [ reduce using rule 2 (Exp -> Exp ADD Exp .) ]
+
+
+state 10
+
+    (3) Exp -> Exp SUB Exp .
+    (2) Exp -> Exp . ADD Exp
+    (3) Exp -> Exp . SUB Exp
+    (4) Exp -> Exp . MUL Exp
+
+  ! shift/reduce conflict for ADD resolved as shift
+  ! shift/reduce conflict for SUB resolved as shift
+  ! shift/reduce conflict for MUL resolved as shift
+    $end            reduce using rule 3 (Exp -> Exp SUB Exp .)
+    PF              reduce using rule 3 (Exp -> Exp SUB Exp .)
+    ADD             shift and go to state 5
+    SUB             shift and go to state 6
+    MUL             shift and go to state 7
+
+  ! ADD             [ reduce using rule 3 (Exp -> Exp SUB Exp .) ]
+  ! SUB             [ reduce using rule 3 (Exp -> Exp SUB Exp .) ]
+  ! MUL             [ reduce using rule 3 (Exp -> Exp SUB Exp .) ]
+
+
+state 11
+
+    (4) Exp -> Exp MUL Exp .
+    (2) Exp -> Exp . ADD Exp
+    (3) Exp -> Exp . SUB Exp
+    (4) Exp -> Exp . MUL Exp
+
+  ! shift/reduce conflict for ADD resolved as shift
+  ! shift/reduce conflict for SUB resolved as shift
+  ! shift/reduce conflict for MUL resolved as shift
+    $end            reduce using rule 4 (Exp -> Exp MUL Exp .)
+    PF              reduce using rule 4 (Exp -> Exp MUL Exp .)
+    ADD             shift and go to state 5
+    SUB             shift and go to state 6
+    MUL             shift and go to state 7
+
+  ! ADD             [ reduce using rule 4 (Exp -> Exp MUL Exp .) ]
+  ! SUB             [ reduce using rule 4 (Exp -> Exp MUL Exp .) ]
+  ! MUL             [ reduce using rule 4 (Exp -> Exp MUL Exp .) ]
+
+
+state 12
+
+    (6) Exp -> PA Exp PF .
+
+    ADD             reduce using rule 6 (Exp -> PA Exp PF .)
+    SUB             reduce using rule 6 (Exp -> PA Exp PF .)
+    MUL             reduce using rule 6 (Exp -> PA Exp PF .)
+    $end            reduce using rule 6 (Exp -> PA Exp PF .)
+    PF              reduce using rule 6 (Exp -> PA Exp PF .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for ADD in state 9 resolved as shift
+WARNING: shift/reduce conflict for SUB in state 9 resolved as shift
+WARNING: shift/reduce conflict for MUL in state 9 resolved as shift
+WARNING: shift/reduce conflict for ADD in state 10 resolved as shift
+WARNING: shift/reduce conflict for SUB in state 10 resolved as shift
+WARNING: shift/reduce conflict for MUL in state 10 resolved as shift
+WARNING: shift/reduce conflict for ADD in state 11 resolved as shift
+WARNING: shift/reduce conflict for SUB in state 11 resolved as shift
+WARNING: shift/reduce conflict for MUL in state 11 resolved as shift

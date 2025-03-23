@@ -1,0 +1,26 @@
+[
+    {
+        "cod": "A28",
+        "nome": "Agua",
+        "quant": 7,
+        "preco": 0.8
+    },
+    {
+        "cod": "C2",
+        "nome": "bolachas",
+        "quant": 8,
+        "preco": 0.8
+    },
+    {
+        "cod": "D24",
+        "nome": "barra de cereais",
+        "quant": 28,
+        "preco": 1.0
+    },
+    {
+        "cod": "E82",
+        "nome": "chocolate",
+        "quant": 8,
+        "preco": 2.0
+    }
+]
